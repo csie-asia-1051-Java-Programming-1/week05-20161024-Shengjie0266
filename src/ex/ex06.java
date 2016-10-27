@@ -12,9 +12,22 @@ public class ex06 {
 		Scanner scn=new Scanner(System.in);
 		int n = scn.nextInt();
 		int [] data=new int [n];
+		int a=0,b=0,c=0;
 		for(int i=0;i<n;i++){
 			data[i]=scn.nextInt();
-			System.out.print();
+		}
+		for(int j=0;j<n;j++){
+			for(int k=0;k<n;k++){
+				if(data[k]>a){
+					a=data[k];
+					c=k;
+				}
+			}
+			b=a;
+			data[c]=-1;
+			a=0;
+			c=0;
+			System.out.println(b);
 		}
 	}
 
